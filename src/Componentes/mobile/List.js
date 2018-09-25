@@ -3,23 +3,21 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import Icon from '@material-ui/core/Icon';
+import { IconButton} from '@material-ui/core';
+import DeleteIcon from '@material-ui/icons/Delete'
 import SupervisedUserCircle from '@material-ui/icons/SupervisedUserCircle'
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import {Link} from 'react-router-dom';
 
-const styles = {
+const styles= {
   root: {
     
   },
+
 };
 
 
-const HabilidadesT = props => <Link to="/habilidadesT" {...props} />
-const HomePage = props => <Link to="/" {...props} />
-const ProyectosPage = props => <Link to="/proyectos" {...props} />
-const Contacto = props => <Link to="/contacto" {...props} />
 
 class LabelBottomNavigation extends React.Component {
   state = {
@@ -36,10 +34,12 @@ class LabelBottomNavigation extends React.Component {
 
     return (
       <BottomNavigation value={value} onChange={this.handleChange} className={classes.root}>
-        <BottomNavigationAction label="Sobre Mi" value="Sobre Mi" icon={<SupervisedUserCircle />} component={HomePage}/>
-        <BottomNavigationAction  label="Habilidades"  value="Habilidades Tech" icon={<FavoriteIcon />} component={HabilidadesT} />
-        <BottomNavigationAction label="Proyectos" value="Proyectos" icon={<LocationOnIcon />} component={ProyectosPage}/>
-        <BottomNavigationAction label="Contacto" value="Contacto" icon={<Icon>C</Icon>} component={Contacto}/>
+      <IconButton aria-label="Delete" >
+          <DeleteIcon />
+        </IconButton>
+        <BottomNavigationAction label="Sobre Mi" value="Sobre Mi" icon={<SupervisedUserCircle />} />
+        <BottomNavigationAction label="Habilidades Tech" value="Habilidades Tech" icon={<FavoriteIcon />}/>
+        <BottomNavigationAction label="Nearby" value="Proyectos" icon={<LocationOnIcon />} />
       </BottomNavigation>
     );
   }

@@ -4,7 +4,10 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/Add';
 import Icon from '@material-ui/core/Icon';
-import DeleteIcon from '@material-ui/icons/Delete';
+import Accountcircle from '@material-ui/icons/Face';
+import Start from '@material-ui/icons/Star';
+import View from '@material-ui/icons/ViewQuilt';
+import Contact from '@material-ui/icons/Contacts'
 import NavigationIcon from '@material-ui/icons/Navigation';
 import {Grid} from '@material-ui/core';
 import {Link} from 'react-router-dom';
@@ -29,16 +32,16 @@ function FloatingActionButtons(props) {
    <Grid container justify="space-between" alignItems="center" className="fixed-bottom">
      <Grid item xs={12}>
        <Button variant="fab" color="primary" aria-label="Add" className={classes.button} component={HomePage}>
-         <AddIcon />
+       <Accountcircle/>
        </Button>
        <Button variant="fab" color="secondary" aria-label="Edit" className={classes.button} component={HabilidadesT}>
-         <Icon></Icon>
+         <Start></Start>
        </Button>
-       <Button variant="fab" aria-label="Delete" className={classes.button} component={ProyectosPage}>
-         <NavigationIcon />
+       <Button variant="fab" aria-label="Delete" color="primary" className={classes.button} component={ProyectosPage}>
+         <View/>
        </Button>
        <Button variant="fab" color="secondary" aria-label="Edit" className={classes.button} component={Contacto}>
-         <Icon></Icon>
+         <Contact/>
        </Button>
      </Grid>
 

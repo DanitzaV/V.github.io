@@ -29,15 +29,15 @@ const Contacto = props => <Link to="/contacto" {...props} />
 function FloatingActionButtons(props) {
  const { classes } = props;
  return (
-   <Grid container justify="space-between" alignItems="center" className="fixed-bottom">
-     <Grid item xs={12}>
+   <Grid container justify="center" alignItems="center" className="fixed-bottom">
+     <Grid item >
        <Button variant="fab" color="primary" aria-label="Add" className={classes.button} component={HomePage}>
        <Accountcircle/>
        </Button>
        <Button variant="fab" color="secondary" aria-label="Edit" className={classes.button} component={HabilidadesT}>
          <Start></Start>
        </Button>
-       <Button variant="fab" aria-label="Delete" color="primary" className={classes.button} component={ProyectosPage}>
+       <Button variant="fab" aria-label="Delete" className={classes.button} component={ProyectosPage}>
          <View/>
        </Button>
        <Button variant="fab" color="secondary" aria-label="Edit" className={classes.button} component={Contacto}>

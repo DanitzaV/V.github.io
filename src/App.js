@@ -17,15 +17,15 @@ class App extends Component {
           </Grid>
           {this.props.children}
         </Grid>
-        <footer>
+
          <Grid container justify={'center'}>
-           <Grid item xs={10}>
+           <Grid item xs={12}>
              <Hidden only={['sm', 'lg', 'md', 'xl']}>
                <ListMobile></ListMobile>
              </Hidden>
            </Grid>
          </Grid>
-       </footer>
+      
       </div>
     );
   }

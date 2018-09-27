@@ -6,8 +6,8 @@ import ListMobile from './../mobile/List';
 class Home extends Component {
   render() {
     return (
-      <Grid item sm={9} xs={12} md={7}>
-           <Typography > hola</Typography>
+      <Grid item  xs={12} sm={9} md={7}>
+           <Typography > Sobre Mi</Typography>
         </Grid>
     );
   }

@@ -9,8 +9,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <Grid container justify="flex-start" alignItems="center">
-          <Grid item sm={3} md={5}>
+      <Grid container justify="center" >
+          <Grid item sm={3} md={5} >
             <Hidden only={['xs']}>
               <List></List>
             </Hidden>

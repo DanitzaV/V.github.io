@@ -1,52 +1,53 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import { IconButton} from '@material-ui/core';
-import DeleteIcon from '@material-ui/icons/Delete'
-import SupervisedUserCircle from '@material-ui/icons/SupervisedUserCircle'
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
+import Button from '@material-ui/core/Button';
+import AddIcon from '@material-ui/icons/Add';
+import Icon from '@material-ui/core/Icon';
+import DeleteIcon from '@material-ui/icons/Delete';
+import NavigationIcon from '@material-ui/icons/Navigation';
+import {Grid} from '@material-ui/core';
 import {Link} from 'react-router-dom';
+import './List.css';
+const styles = theme => ({
+ button: {
+   margin: 12,
+ },
+ extendedIcon: {
+   marginRight: theme.spacing.unit,
+ },
+});
 
-const styles= {
-  root: {
-    
-  },
+const HabilidadesT = props => <Link to="/habilidadesT" {...props} />
+const HomePage = props => <Link to="/" {...props} />
+const ProyectosPage = props => <Link to="/proyectos" {...props} />
+const Contacto = props => <Link to="/contacto" {...props} />
 
-};
+function FloatingActionButtons(props) {
+ const { classes } = props;
+ return (
+   <Grid container justify="space-between" alignItems="center" className="fixed-bottom">
+     <Grid item xs={12}>
+       <Button variant="fab" color="primary" aria-label="Add" className={classes.button} component={HomePage}>
+         <AddIcon />
+       </Button>
+       <Button variant="fab" color="secondary" aria-label="Edit" className={classes.button} component={HabilidadesT}>
+         <Icon></Icon>
+       </Button>
+       <Button variant="fab" aria-label="Delete" className={classes.button} component={ProyectosPage}>
+         <NavigationIcon />
+       </Button>
+       <Button variant="fab" color="secondary" aria-label="Edit" className={classes.button} component={Contacto}>
+         <Icon></Icon>
+       </Button>
+     </Grid>
 
-
-
-class LabelBottomNavigation extends React.Component {
-  state = {
-    value: 'recents',
-  };
-
-  handleChange = (event, value) => {
-    this.setState({ value });
-  };
-
-  render() {
-    const { classes } = this.props;
-    const { value } = this.state;
-
-    return (
-      <BottomNavigation value={value} onChange={this.handleChange} className={classes.root}>
-      <IconButton aria-label="Delete" >
-          <DeleteIcon />
-        </IconButton>
-        <BottomNavigationAction label="Sobre Mi" value="Sobre Mi" icon={<SupervisedUserCircle />} />
-        <BottomNavigationAction label="Habilidades Tech" value="Habilidades Tech" icon={<FavoriteIcon />}/>
-        <BottomNavigationAction label="Nearby" value="Proyectos" icon={<LocationOnIcon />} />
-      </BottomNavigation>
-    );
-  }
+   </Grid>
+ );
 }
 
-LabelBottomNavigation.propTypes = {
-  classes: PropTypes.object.isRequired,
+FloatingActionButtons.propTypes = {
+ classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(LabelBottomNavigation);
+export default withStyles(styles)(FloatingActionButtons);

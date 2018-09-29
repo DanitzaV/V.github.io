@@ -20,11 +20,11 @@ class Home extends Component {
           </Grid>
         </Hidden>
         <Hidden only={['xs']} >
-          <Grid item sm={6} md={6} xl={6} style={{paddingTop: 40,}}>
+          <Grid item sm={6} md={6} xl={6} style={{paddingTop: 40,}} className="fondo">
             <h2 className="title">Viviana Marcelo</h2>
             <Typography color="inherit" align="center" className="aboutme"> Front-end Developer</Typography>
           </Grid>
-          <Grid item sm={6} md={6} xl={6} style={{paddingTop: 180,paddingLeft: 70,paddingRight: 70}}>    
+          <Grid item sm={6} md={6} xl={6} style={{paddingTop: 180,paddingLeft: 70,paddingRight: 70}} className="fondo">    
             <Typography align="center" style={{ color: 'white' }}>Cuando salí de la secundaria , no sabía qué estudiar,
               afortunadamente Laboratoria se presentó en mi camino.En el bootcamp
               descubrí que me encanta codear y aprendí todo lo necesario para convertirme en

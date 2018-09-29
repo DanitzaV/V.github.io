@@ -10,7 +10,7 @@ class Home extends Component {
       <Grid container >
         <Hidden only={['sm', 'lg', 'md', 'xl']}>
           <Grid container justify="center" className="mobile">
-          <Grid item xs={12} >
+          <Grid item xs={12} className="fondo">
             <h2 className="title">Viviana Marcelo</h2>
             <Typography color="inherit" align="center" className="aboutme"> Front-end Developer</Typography>
             <Typography align="center" style={{ color: 'white' }}>Cuando salí de la secundaria , no sabía qué estudiar,

@@ -7,8 +7,9 @@ import './Home.css'
 class Home extends Component {
   render() {
     return (
-      <Grid container justify="center" className="mobile" >
+      <Grid container >
         <Hidden only={['sm', 'lg', 'md', 'xl']}>
+          <Grid container justify="center" className="mobile">
           <Grid item xs={12} >
             <h2 className="title">Viviana Marcelo</h2>
             <Typography color="inherit" align="center" className="aboutme"> Front-end Developer</Typography>
@@ -18,9 +19,12 @@ class Home extends Component {
               front-end developer.
             </Typography>
           </Grid>
+          </Grid>
+         
         </Hidden>
         <Hidden only={['xs']} >
-          <Grid item sm={6} md={6} xl={6} style={{paddingTop: 40,}} className="fondo">
+          <Grid container justify="center" className="desktop" >
+          <Grid item sm={6} md={6} xl={6} style={{paddingTop: 40,}} className={['fondo']}>
             <h2 className="title">Viviana Marcelo</h2>
             <Typography color="inherit" align="center" className="aboutme"> Front-end Developer</Typography>
           </Grid>
@@ -31,6 +35,8 @@ class Home extends Component {
               front-end developer.
             </Typography>
           </Grid>
+          </Grid>
+          
         </Hidden>
 
       </Grid>

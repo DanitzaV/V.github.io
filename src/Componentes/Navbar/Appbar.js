@@ -16,8 +16,8 @@ const styles  = theme => ( {
   },
   button: {
     marginLeft: 12,
-    paddingLeft: 50,
-    paddingRight: 50
+    paddingLeft: 20,
+    paddingRight: 20
     
   },
   cssRoot: {
@@ -40,7 +40,7 @@ function SimpleAppBar(props) {
    
       <AppBar position="fixed" color="default" className="navbar">
         <Toolbar>
-        <Grid container justify={'center'}  className="navbar" >
+        <Grid container justify={'space-around'}  className="navbar" >
           <Grid item  >
           <Button variant="outlined" component={HomePage} size="large" className={[ classes.cssRoot,classes.button,"bt"]}>
             Sobre Mi

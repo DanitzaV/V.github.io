@@ -1,1 +1,20 @@
 
+.mobile{
+    height: 100vh !important;
+    /* fondo */
+
+position: absolute;
+
+
+left: 0px;
+top: 0px;
+color: #ffffff;
+background: url(img/photo.jpg);
+border: 1px solid #000000;
+box-sizing: border-box;
+box-shadow: inset 0px 4px 4px rgba(8, 8, 8, 0.35);
+background-size: contain;
+background-repeat: round;
+filter: grayscale(50%), contrast(1%)
+
+}

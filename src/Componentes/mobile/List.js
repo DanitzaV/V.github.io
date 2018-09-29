@@ -19,8 +19,9 @@ const styles = theme => ({
  extendedIcon: {
    marginRight: theme.spacing.unit,
  },
+ 
 });
-
+const accent = '#FFFFFF';
 const HabilidadesT = props => <Link to="/habilidadesT" {...props} />
 const HomePage = props => <Link to="/" {...props} />
 const ProyectosPage = props => <Link to="/proyectos" {...props} />
@@ -29,18 +30,18 @@ const Contacto = props => <Link to="/contacto" {...props} />
 function FloatingActionButtons(props) {
  const { classes } = props;
  return (
-   <Grid container justify="center" alignItems="center" className="fixed-bottom">
+   <Grid container justify="center" alignItems="center" className="fixed-bottom" >
      <Grid item >
-       <Button variant="fab" color="primary" aria-label="Add" className={classes.button} component={HomePage}>
+       <Button variant="fab" color aria-label="Add" className={classes.button} component={HomePage}>
        <Accountcircle/>
        </Button>
-       <Button variant="fab" color="secondary" aria-label="Edit" className={classes.button} component={HabilidadesT}>
+       <Button variant="fab"  aria-label="Edit" className={classes.button} component={HabilidadesT}>
          <Start></Start>
        </Button>
        <Button variant="fab" aria-label="Delete" className={classes.button} component={ProyectosPage}>
          <View/>
        </Button>
-       <Button variant="fab" color="secondary" aria-label="Edit" className={classes.button} component={Contacto}>
+       <Button variant="fab"  aria-label="Edit" className={classes.button} component={Contacto}>
          <Contact/>
        </Button>
      </Grid>

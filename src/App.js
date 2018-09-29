@@ -5,27 +5,23 @@ import './App.css';
 import List from './Componentes/List/List';
 import ListMobile from './Componentes/mobile/List';
 import Home from './Componentes/page/Home';
+import Appbar from './Componentes/Navbar/Appbar';
 class App extends Component {
   render() {
     return (
       <div className="App">
-      <Grid container justify="center" >
-          <Grid item sm={3} md={5} >
-            <Hidden only={['xs']}>
-              <List></List>
+        <Hidden only={['xs']}>
+          <Appbar></Appbar>
+        </Hidden>
+          {this.props.children}
+        <Grid container justify={'center'}  >
+          <Grid item xs={12} >
+            <Hidden only={['sm', 'lg', 'md', 'xl']}>
+              <ListMobile></ListMobile>
             </Hidden>
           </Grid>
-          {this.props.children}
         </Grid>
 
-         <Grid container justify={'center'}>
-           <Grid item xs={12}>
-             <Hidden only={['sm', 'lg', 'md', 'xl']}>
-               <ListMobile></ListMobile>
-             </Hidden>
-           </Grid>
-         </Grid>
-      
       </div>
     );
   }

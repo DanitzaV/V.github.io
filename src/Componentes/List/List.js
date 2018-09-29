@@ -18,18 +18,16 @@ const styles = theme => ({
 });
 
 const HabilidadesT = props => <Link to="/habilidadesT" {...props} />
-const HomePage = props => <Link to="/" {...props} />
+
 const ProyectosPage = props => <Link to="/proyectos" {...props} />
 const Contacto = props => <Link to="/contacto" {...props} />
 
 function SimpleList(props) {
   const { classes } = props;
   return (
-    <div className={classes.root}>
-      <List component="nav">
-        <Button variant="outlined" component={HomePage} fullWidth className={classes.button}>
-          Sobre Mi
-      </Button>
+    <div className={classes.root} >
+      <List component="nav" style={{zIndex: 99}}>
+        
         <Button variant="outlined"  component={HabilidadesT} fullWidth className={classes.button}>
           Habilidades Tecnicas
       </Button>

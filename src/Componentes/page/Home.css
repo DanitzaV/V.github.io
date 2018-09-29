@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Righteous);
-@import url(https://fonts.googleapis.com/css?family=ReemKufi);
+@import url('https://fonts.googleapis.com/css?family=Reem+Kufi|Righteous');
 
 .title{
   /* Old browsers */
@@ -8,7 +7,7 @@
   letter-spacing: .16em;
   text-align: center;
   /* text-shadow: -5px 0px 0px rgb(255, 3, 104); */
-  font-family:Righteous;
+  font-family: 'Righteous', cursive;
 font-style: normal;
 font-weight: normal;
 line-height: normal;
@@ -18,8 +17,13 @@ color: #FFFFFF;
 
 }
 .aboutme{
-    font-family: Reem Kufi;
+    font-family: 'Reem Kufi', sans-serif;
+    text-align: center; 
+    font-size: larger;
 }
 .fondo{
     background-color: rgba(0, 0, 0, 0.43);
+}
+.fondomobiel{
+    background-color: rgba(0, 0, 0, 0.01);
 }

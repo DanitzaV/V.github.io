@@ -22,7 +22,7 @@ const styles  = theme => ( {
   },
   cssRoot: {
     color: theme.palette.getContrastText(purple[500]),
-    backgroundColor: grey[400],
+    backgroundColor: 'transparent',
     '&:hover': {
       backgroundColor: purple[700],
     },

@@ -29,11 +29,12 @@ position: absolute;
 left: 0px;
 top: 0px;
 color: #ffffff;
-background: url(img/photo.jpg);
+background: url(img/photo-desktop.jpg);
 
 
 box-shadow: inset 0px 4px 4px rgba(8, 8, 8, 0.35);
 background-size: cover;
-background-repeat: round;
+    background-position: center;
+
 filter: grayscale(50%), contrast(1%)
 }

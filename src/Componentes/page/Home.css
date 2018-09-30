@@ -19,11 +19,15 @@ color: #FFFFFF;
 .aboutme{
     font-family: 'Reem Kufi', sans-serif;
     text-align: center; 
-    font-size: 24px;
+    font-size: 31px;
 }
 .fondo{
-    background-color: rgba(0, 0, 0, 0.43);
+    background-color: rgba(0, 0, 0, 0.54)
 }
 .fondomobiel{
     background-color: rgba(0, 0, 0, 0.01);
+}
+.parrafoMd{
+    padding-top: 1.5em;
+    font-size: 18px !important;
 }
